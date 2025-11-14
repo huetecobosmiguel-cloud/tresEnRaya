@@ -4,7 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class TresEnRaya {
-	static char[][] tablero = new char[3][3];
+	private static char[][] tablero = new char[3][3];
+	private static final char JUGADOR_1 = 'x';
+	private static final char JUGADOR_2 = 'o';
+	
+	public static char turno = JUGADOR_1;
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -18,6 +22,7 @@ public class TresEnRaya {
 				 break;
 			 case 2:
 				 mostrarInstrucciones();
+				 break;
 			 case 3:
 				 System.out.println("Vuelve pronto.");
 				 break;
@@ -33,7 +38,10 @@ public class TresEnRaya {
 	}
 
 	private static void mostrarInstrucciones() {
-		
+		System.out.println("Instrucciones:");
+		System.out.println("El jugador X comienza.");
+		System.out.println("Se introduce fila y columna entre 0 y 2.");
+		System.out.println("Gana el que consiga 3 en raya.");
 	}
 
 	private static void jugar(Scanner sc) {
